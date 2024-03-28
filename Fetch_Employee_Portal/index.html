@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!--     
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+      integrity="sha512-5A0LKI/xGVxGl+2ffA+tSPa+US+js5Mr9YvuZFaN8m2FxEl8UyvpFrfmVbdsrhksvbuoThf+WI1/djjDhjquHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.lite.min.css"
+      integrity="sha512-Eu5EEZpsrO6niYlnhT+ITom/YVGoIZGEsbAvZ+gUJsO3Xaq9+hX4vZnbecMn/Cq5KOdmNOdehu/U80111W9xsA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <title>Employee Portal Fetch</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-secondary">Employee Portal Fetch</a>
+      </div>
+    </nav>
+    <!-- Employee portal intro -->
+    <div class="conatainer mt-3">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center">Employee Portal Fetch</h2>
+          <div class="lead text-center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic at
+            veritatis, rem in doloribus ipsa exercitationem aut cumque labore
+            quia, quod odio molestiae libero sed dolorum eaque earum ut quos.
+          </div>
+          <button
+            class="text-center btn btn-success"
+            data-toggle="modal"
+            data-target="#add-employee-modal"
+          >
+            Add Employee
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Employee Modal -->
+    <div class="modal" id="add-employee-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h3>Add Employee</h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <!-- Form  -->
+          <div class="modal-body bg-light">
+            <form id="add-employee-form">
+              <div class="form-group">
+                <input
+                  required
+                  id="add-first-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="First_Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  required
+                  id="add-last-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Last_Name"
+                />
+              </div>
+              <div class="form-group">
+                <input id="add-email" type="email" required class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <select required id="add-gender" class="form-control">
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input
+                  required
+                  id="add-ip-address"
+                  type="text"
+                  class="form-control"
+                  placeholder="IP_Address"
+                />
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  value="Add Employee"
+                  class="btn btn bg-success"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update Employee Modal -->
+    <div class="modal" id="update-employee-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary text-white">
+            <h3>Update Employee</h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <!-- Form  -->
+          <div class="modal-body bg-light">
+            <form id="update-employee-form">
+               <input type="text" id="myInput" placeholder="Employee ID"hidden >
+                <input
+                id="update-emp-id"
+                type="text"
+                class="form-control"
+                placeholder="Employee ID"
+                style="display: none;"
+                />
+              <div class="form-group">
+                <input
+                  required
+                  id="update-first-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="First_Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  required
+                  id="update-last-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Last_Name"
+                />
+              </div>
+              <div class="form-group">
+                <input id="update-email" type="email" required class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <select required id="update-gender" class="form-control">
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input
+                  required
+                  id="update-ip-address"
+                  type="text"
+                  class="form-control"
+                  placeholder="IP_Address"
+                />
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  value="Update Employee"
+                  class="btn btn bg-secondary"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employee Table -->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col">
+          <table
+            class="table table-hover text-center table-secondary table striped text-center"
+          >
+            <thead class="bg-primary text-white">
+              <tr>
+                <th>EMP ID</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>GENDER</th>
+                <th>IP ADDRESS</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script type="module" src="App.js"></script>
+  </body>
+</html>

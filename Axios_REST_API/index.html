@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+      integrity="sha512-5A0LKI/xGVxGl+2ffA+tSPa+US+js5Mr9YvuZFaN8m2FxEl8UyvpFrfmVbdsrhksvbuoThf+WI1/djjDhjquHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <title>AXIOS REST API</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">AXIOS REST API</a>
+    </nav>
+
+    <!-- Buttons -->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col text-center">
+          <buton class="btn btn-primary" id="get-btn">GET</buton>
+          <buton class="btn btn-success" id="post-btn">POST</buton>
+          <buton class="btn btn-warning" id="put-btn">PUT</buton>
+          <buton class="btn btn-warning" id="delete-btn">DELETE</buton>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col">
+          <table
+            class="table table-hover text-center table-secondary table striped"
+          >
+            <thead class="bg-secondary text-white">
+              <tr>
+                <th>EMP ID</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>GENDER</th>
+                <th>IP ADDRESS</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="axios.min.js"></script>
+    <script src="App.js"></script>
+  </body>
+</html>
